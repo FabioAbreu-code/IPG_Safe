@@ -13,7 +13,7 @@ class TabelaResultadosPositivos(db: SQLiteDatabase) {
         db.execSQL(
             "CREATE TABLE " + NOME_TABELA + "(" +
                     BaseColumns._ID +" INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    CAMPO_NOME +"TEXT NOT NULL" +
+                    CAMPO_NOME +" TEXT NOT NULL " +
                     ")"
         )
     }

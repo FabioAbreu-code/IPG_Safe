@@ -10,10 +10,8 @@ class TabelaAguardaResultados(db: SQLiteDatabase) {
 
     fun cria() {
         db.execSQL(
-            "CREATE TABLE " + NOME_TABELA + "(" +
-                    BaseColumns._ID +" INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    CAMPO_NOME +"TEXT NOT NULL" +
-                    ")"
+            " CREATE TABLE " + NOME_TABELA + "(" +
+                    BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CAMPO_NOME + " TEXT NOT NULL " + ")"
         )
     }
 
@@ -43,7 +41,7 @@ class TabelaAguardaResultados(db: SQLiteDatabase) {
 
 
     companion object{
-        const val NOME_TABELA = "aguarda resultado"
+        const val NOME_TABELA = "aguarda_resultado"
         const val CAMPO_NOME = "nome"
     }
 }
