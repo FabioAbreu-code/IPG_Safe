@@ -14,9 +14,9 @@ class BdDadosPessoaisOpenHelper(context: Context?)
      */
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
-            TabelaAguardaResultados(db).cria()
-            TabelaResultadosPositivos(db).cria()
-            TabelaDadosPessoais(db).cria()
+            TabelaRecuperados(db).cria()
+            TabelaInfetados(db).cria()
+            TabelaAguardaTeste(db).cria()
         }
     }
 
@@ -46,7 +46,7 @@ class BdDadosPessoaisOpenHelper(context: Context?)
     }
 
     companion object {
-        const val NOME_BASE_DADOS = "dadosPessoais.db"
+        const val NOME_BASE_DADOS = "covid.db"
         const val VERSAO_BASE_DADOS = 1
     }
 }

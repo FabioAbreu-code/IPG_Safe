@@ -5,24 +5,11 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns
 
-class TabelaDadosPessoais(db: SQLiteDatabase) {
+class TabelaAguardaTeste(db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria(){
-        db.execSQL("CREATE TABLE " + NOME_TABELA + "(" +
-                BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                CAMPO_NOME_COMPLETO + " TEXT NOT NULL, " +
-                CAMPO_ENDEREÇO_EMAIL+ " TEXT NOT NULL, " +
-                CAMPO_NUMERO_TELEMOVEL+ " TEXT NOT NULL, " +
-                CAMPO_ID_AGUARDA_RESULTADO + " INTEGER, " +
-                CAMPO_ID_RESULTADO + " INTEGER, " +
-                " FOREIGN KEY ("+ CAMPO_ID_AGUARDA_RESULTADO +") " +
-                " REFERENCES " + TabelaAguardaResultados.NOME_TABELA +
-                " FOREIGN KEY ("+ CAMPO_ID_RESULTADO +") " +
-                " REFERENCES " + TabelaResultadosPositivos.NOME_TABELA +
-                ")"
-        )
-
+        db.execSQL("CREATE TABLE $NOME_TABELA (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, $CAMPO_NOME_COMPLETO TEXT NOT NULL, $CAMPO_ENDEREÇO_EMAIL TEXT NOT NULL, $CAMPO_NUMERO_TELEMOVEL TEXT NOT NULL, $CAMPO_ID_AGUARDA_RESULTADO INTEGER, $CAMPO_ID_RESULTADO INTEGER, FOREIGN KEY ($CAMPO_ID_AGUARDA_RESULTADO) REFERENCES ${TabelaRecuperados.NOME_TABELA}, FOREIGN KEY ($CAMPO_ID_RESULTADO) REFERENCES ${TabelaInfetados.NOME_TABELA})")
     }
 
     fun insert(values: ContentValues): Long {
