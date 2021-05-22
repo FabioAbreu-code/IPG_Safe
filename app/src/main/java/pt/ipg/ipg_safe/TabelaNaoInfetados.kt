@@ -10,7 +10,7 @@ class TabelaNaoInfetados(db: SQLiteDatabase)  {
 
 
     fun cria() {
-        db.execSQL("CREATE TABLE $NOME_TABELA (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, $CAMPO_NOME TEXT NOT NULL)")
+        db.execSQL("CREATE TABLE ${TabelaDadosPessoais.NOME_TABELA} (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT,${TabelaDadosPessoais.NOME} TEXT NOT NULL, $CAMPO_ID_DADOS_PESSOAIS INTEGER NOT NULL, FOREIGN KEY($CAMPO_ID_DADOS_PESSOAIS) REFERENCES ${TabelaDadosPessoais.NOME} )")
     }
 
     fun insert(values: ContentValues): Long {
@@ -35,9 +35,8 @@ class TabelaNaoInfetados(db: SQLiteDatabase)  {
     ): Cursor? {
         return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy)
     }
-
     companion object{
-        const val NOME_TABELA = "resultado"
-        const val CAMPO_NOME = "nome"
+        const val NOME_TABELA = "Nao_Infetados"
+        const val CAMPO_ID_DADOS_PESSOAIS= "Id_Dados_Pessoais"
     }
 }
