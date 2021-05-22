@@ -17,6 +17,8 @@ class BdDadosPessoaisOpenHelper(context: Context?)
             TabelaRecuperados(db).cria()
             TabelaInfetados(db).cria()
             TabelaAguardaTeste(db).cria()
+            TabelaNaoInfetados(db).cria()
+
         }
     }
 
