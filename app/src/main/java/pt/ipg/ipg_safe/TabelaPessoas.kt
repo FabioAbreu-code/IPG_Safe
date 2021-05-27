@@ -5,7 +5,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns
 
-class TabelaDadosPessoais(db: SQLiteDatabase) {
+class TabelaPessoas(db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria(){
@@ -36,7 +36,7 @@ class TabelaDadosPessoais(db: SQLiteDatabase) {
     }
 
     companion object{
-        const val NOME_TABELA = "Dados_Pessoas"
+        const val NOME_TABELA = "Dados_Pessoais"
         const val NOME = "Nome"
         const val SEXO = "Sexo"
         const val DATA_NASCIMENTO = "Data_de_Nascimento"

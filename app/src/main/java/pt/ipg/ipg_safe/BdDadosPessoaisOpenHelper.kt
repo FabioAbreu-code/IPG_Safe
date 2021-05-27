@@ -14,11 +14,8 @@ class BdDadosPessoaisOpenHelper(context: Context?)
      */
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
-            TabelaRecuperados(db).cria()
-            TabelaInfetados(db).cria()
-            TabelaDadosPessoais(db).cria()
-            TabelaNaoInfetados(db).cria()
-            TabelaMortes(db).cria()
+            TabelaPessoas(db).cria()
+
         }
     }
 
