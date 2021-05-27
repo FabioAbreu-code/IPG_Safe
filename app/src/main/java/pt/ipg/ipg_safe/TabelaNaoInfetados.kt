@@ -9,7 +9,7 @@ class TabelaNaoInfetados(db: SQLiteDatabase) {
     private val db: SQLiteDatabase = db
 
     fun cria() {
-        db.execSQL("CREATE TABLE ${TabelaInfetados.NOME_TABELA} (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, ${TabelaPessoas.NUM_UTENTE} TEXT NOT NULL, ${TabelaPessoas.NOME} TEXT NOT NULL , ${TabelaPessoas.NUM_TELEMOVEL} TEXT NOT NULL, ${TabelaPessoas.EMAIL} TEXT NOT NULL, ${TabelaPessoas.MORADA} TEXT NOT NULL)")
+        db.execSQL("CREATE TABLE ${TabelaNaoInfetados.NOME_TABELA} (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, ${TabelaPessoas.NUM_UTENTE} TEXT NOT NULL, ${TabelaPessoas.NOME} TEXT NOT NULL , ${TabelaPessoas.NUM_TELEMOVEL} TEXT NOT NULL, ${TabelaPessoas.EMAIL} TEXT NOT NULL, ${TabelaPessoas.MORADA} TEXT NOT NULL)")
     }
 
     fun insert(values: ContentValues): Long {
@@ -39,5 +39,4 @@ class TabelaNaoInfetados(db: SQLiteDatabase) {
         const val NOME_TABELA = "Nao_Infetados"
 
     }
-}
 }
