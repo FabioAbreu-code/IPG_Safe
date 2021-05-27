@@ -15,7 +15,7 @@ class BdDadosPessoaisOpenHelper(context: Context?)
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
             TabelaPessoas(db).cria()
-
+            TabelaRecuperados(db).cria()
         }
     }
 
