@@ -16,6 +16,8 @@ class BdDadosPessoaisOpenHelper(context: Context?)
         if (db != null) {
             TabelaPessoas(db).cria()
             TabelaRecuperados(db).cria()
+            TabelaInfetados(db).cria()
+            TabelaNaoInfetados(db).cria()
         }
     }
 
