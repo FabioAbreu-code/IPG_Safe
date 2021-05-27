@@ -1,22 +1,18 @@
-# IPG_Safe
+# 🎓 IPG_Safe
+<h4> Desenvolvimmento de um aplicativo para gerir os teste ao covid-19.</h4>
 
-## Descrição do Projeto
-<h1 align="center">
-    
-</h1>
-<p align="center">🚀 lib para construir interfaces do usuário com componentes reutilizáveis</p>
+## 💉Descrição do Projeto
+<p> O projeto consiste no desenvolvimento de um aplicativo, capaz de realizar uma gestão eficiente dos testes ao covid-19.<br>
+Os dados pessoais dos pacientes são colocados numa base de dados de forma a identificar quem se encontra infetado, <br> quem testou negativo e quem recuperou.</p>
 
-## Features
-<h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
-</h4>
+## 👷Status do Projeto
+<p> Em construção...  🚧 </p>
 
-## Status do Projeto
-<h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
-</h4>
+## ✨Features
+<h4><br></h4>
 
-## Demonstração da aplicação
+## 📱Demonstração da aplicação
+<h4><br></h4>
 
-
-## Autor
+## 🧙Autor
+<h4> Fábio Abreu </h4>
